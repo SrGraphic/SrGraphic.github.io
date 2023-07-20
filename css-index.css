@@ -10,7 +10,7 @@
 }
 
 body {
-  background:#fbfeff;
+  background:#ffffff;
 }
 
 /* Logo */
@@ -20,7 +20,7 @@ body {
 }
 
 .img-logo {
-  width: 230px;
+  width: 220px;
   margin-top: 50px;
 }
 
@@ -29,7 +29,7 @@ body {
   text-align: center;
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 21px;
   margin-bottom: 10px;
   padding-top: 35px;
   color: #000000;
