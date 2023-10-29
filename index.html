@@ -1,34 +1,28 @@
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css-index.css">
-  <link rel="icon" type="image/png" href="icon.png">
-  <script src="https://kit.fontawesome.com/fbca715a88.js" crossorigin="anonymous"></script>
+<!DOCTYPE html>
+<html lang="es">
+    <title>SrGraphic</title>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Sometype+Mono&display=swap');body {margin: 0;padding: 0;font-family: 'Sometype Mono', monospace;}.maintenance-bg {background-image: url('fondo.jpg'); background-size: cover;height: 100vh;display: flex;justify-content: center;align-items: center;}.maintenance-content {text-align: center;color: black;}.maintenance-clock {font-size: 24px;margin-top: 20px;}</style>
 </head>
 <body>
-  <div class="header">
-    <img class="img-logo" src="logo.png">
-  </div>
-  <p class="tittle">¡BIENVENIDO!</p>
-  <p class="sub-tittle">Inicia sesion con tu usuario y contraseña o crea una nueva cuenta.</p>
-  <div class="form-center">
-    <form action="inicio.html">
-      <i class="fa-solid fa-user icon1"></i>
-      <input type="user" class="input-ed" placeholder="USUARIO" required>
-      <br><br>
-      <i class="fa-solid fa-lock icon2"></i>
-      <input class="input-ed-two" type="password" placeholder="CLAVE" required>
-      <br><br>
-      <a style="text-decoration: none;" href="#"><p class="lost-pass-txt">¿Olvidaste tu contraseña?</p></a>
-      <button class="button">INICIAR SESION</button>
-    </form>
-    <a href="#"><button class="button-two">CREAR CUENTA</button></a>
-  </div>
-  <hr class="hr-ed">
-  <div class="div-icons">
-    <span class="circle-icons"><i class="fa-solid fa-headset"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="circle-icons"><i class="fa-solid fa-lock"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="circle-icons"><i class="fa-solid fa-key"></i></span>
-  </div>
-  <p class="tittle-copyright">COPYRIGHT © WAVES 2023.</p>
+    <div class="maintenance-bg">
+        <div class="maintenance-content">
+            <h1>WEB BUILDING</h1>
+            <div id="clock" class="maintenance-clock"></div>
+        </div>
+    </div>
+    <script>
+function updateClock() {
+    const clockElement = document.getElementById('clock');
+    const now = new Date();
+    const futureDate = new Date(now.getTime() + 6 * 24 * 60 * 60 * 1000);
+    const days = (futureDate - now) / (1000 * 60 * 60 * 24);
+    const hours = futureDate.getHours().toString().padStart(2, '0');
+    const minutes = futureDate.getMinutes().toString().padStart(2, '0');
+    const seconds = futureDate.getSeconds().toString().padStart(2, '0');
+    clockElement.textContent = `${Math.floor(days)}D:${hours}:${minutes}:${seconds}`;
+}
+setInterval(updateClock, 1000);
+updateClock();
+    </script>
 </body>
 </html>
